@@ -1,0 +1,25 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Restorante Rezervante backend documentation
+            description: This is an awesome documentation for Restorante Rezervante, an app for Lumen competition!
+            version: 1.0.0
+    models:
+        names:
+            - { alias: User,        type: App\Entity\AppUser}
+            - { alias: Group,        type: App\Entity\AppGroup}
+            - { alias: Reservation,        type: App\Entity\Reservations}
+            - { alias: Restaurant,        type: App\Entity\Restaurant}
+            - { alias: Table,        type: App\Entity\RestaurantTable}
+            - { alias: Waiting,        type: App\Entity\WaitingList}
+
+    areas: # to filter documented areas
+        path_patterns:
+        #- ^/(?!/doc$) # Accepts routes under /api except /api/doc
+            - ^/user
+            - ^/reservations
+            - ^/reservation
+            - ^/waiting
+            - ^/table
+            - ^/restaurant
+            - ^/group
